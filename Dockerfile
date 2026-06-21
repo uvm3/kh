@@ -14,4 +14,6 @@ EXPOSE 7860
 ENV SHELL=/bin/bash
 ENV PS1="\u@\h:\w$ "
 
+WORKDIR /workspace
+
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=7860", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--ServerApp.disable_check_xsrf=True", "--ServerApp.allow_origin='*'"]
